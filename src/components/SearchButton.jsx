@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { connect } from "react-redux";
 import { fetchWeather } from "../actions/weatherAction";
+import { IoSearchSharp } from "react-icons/io5";
 
 const SearchButton = (props) => {
   const locationState = useLocation();
@@ -20,23 +21,25 @@ const SearchButton = (props) => {
   };
 
   return (
-    <>
-      <div className="flex items-center justify-center gap-4 mb-6 w-full max-w-lg">
+    <div className="w-[100%] max-w-[400px] flex items-center justify-center gap-2 my-4">
+      <div className="w-[100%] flex items-center justify-center gap-4
+        border-2 border-gray-300 rounded-[22px] p-1
+      ">
         <input
           type="text"
           placeholder="Enter location"
           value={location}
           onChange={(e) => setLocation(e.target.value)}
-          className="border rounded-md p-2 w-full"
+          className="w-full h-full pl-4 outline-none"
         />
         <button
           onClick={handleSearch}
-          className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition"
+          className="bg-gray-300 text-white p-2 rounded-[100%] cursor-pointer"
         >
-          Search
+          <IoSearchSharp/>
         </button>
       </div>
-    </>
+    </div>
   );
 };
 
