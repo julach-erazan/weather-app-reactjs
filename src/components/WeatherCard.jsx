@@ -46,7 +46,7 @@ const WeatherCard = (props) => {
     <>
       <h1 className="text-lg font-semibold text-blue-600 flex items-center justify-center gap-1">
         <IoLocationSharp />
-        {weather.location.name}
+        {weather?.location?.name}
       </h1>
       <div className="w-[300px] h-[240px] bg-gradient-to-br from-blue-400 to-blue-600 rounded-[25px] border-2 border-blue-700 shadow-xl shadow-blue-300/50 mt-3 p-4 text-white">
         <h1 className="text-[45px] font-semibold text-start tracking-wide leading-none">
@@ -58,14 +58,14 @@ const WeatherCard = (props) => {
               {date.toUpperCase()}
             </h3>
             <h2 className="text-[45px] font-bold drop-shadow-md">
-              {Math.round(weather.current.temp_c)}°C
+              {Math.round(weather?.current?.temp_c)}°C
             </h2>
             <h3 className="text-lg font-light">
-              {weather.current.condition.text}
+              {weather?.current?.condition?.text}
             </h3>
           </div>
           <img
-            src={weather.current.condition.icon}
+            src={weather?.current?.condition?.icon}
             alt="weatherIcon"
             className="w-[120px] h-[120px] object-contain -mr-4"
           />
@@ -76,19 +76,19 @@ const WeatherCard = (props) => {
         <div className="flex flex-col justify-center items-center">
           <RiWindyLine />
           <h1 className="text-[15px] font-bold">
-            {Math.round(weather.current.wind_kph)}Km/h
+            {Math.round(weather?.current?.wind_kph)}Km/h
           </h1>
           <p className="text-[12px] text-blue-400">Wind Speed</p>
         </div>
         <div className="flex flex-col justify-center items-center">
           <IoWater />
-          <h1 className="text-[15px] font-bold">{weather.current.humidity}%</h1>
+          <h1 className="text-[15px] font-bold">{weather?.current?.humidity}%</h1>
           <p className="text-[12px] text-blue-400">Humidity</p>
         </div>
         <div className="flex flex-col justify-center items-center">
           <IoIosUmbrella />
           <h1 className="text-[15px] font-bold">
-            {weather.forecast.forecastday[0].day.daily_chance_of_rain}%
+            {weather?.forecast?.forecastday?.[0]?.day?.daily_chance_of_rain}%
           </h1>
           <p className="text-[12px] text-blue-400">Chance of rain</p>
         </div>
@@ -107,7 +107,7 @@ const WeatherCard = (props) => {
               className="flex-shrink-0 w-[90px] pt-2 pb-2 bg-gradient-to-br from-blue-200 to-blue-300 rounded-[35px] flex flex-col justify-center items-center gap-3 border-2 border-blue-400"
             >
               <h1>{data.time.split(" ")[1]}</h1>
-              <img src={data.condition.icon} alt="weatherIcon" className="w-[50px]"/>
+              <img src={data?.condition?.icon} alt="weatherIcon" className="w-[50px]"/>
               <h1>{Math.round(data.temp_c)}°C</h1>
             </li>
           ))}
@@ -121,7 +121,7 @@ const WeatherCard = (props) => {
         <div className="w-[50%] h-[100%] bg-[#2c67f2] rounded-tr-[15px] rounded-br-[15px] flex flex-col items-center justify-center text-white">
           <h1 className="text-[20px] text-blue-300">Sunrise</h1>
           <h2 className="text-[25px]">
-            {weather.forecast.forecastday[0].astro.sunrise}
+            {weather?.forecast?.forecastday?.[0]?.astro?.sunrise}
           </h2>
         </div>
       </div>
@@ -133,7 +133,7 @@ const WeatherCard = (props) => {
         <div className="w-[50%] h-[100%] bg-[#2c67f2] rounded-tr-[15px] rounded-br-[15px] flex flex-col items-center justify-center text-white">
           <h1 className="text-[20px] text-blue-300">Sunset</h1>
           <h2 className="text-[25px]">
-            {weather.forecast.forecastday[0].astro.sunset}
+            {weather?.forecast?.forecastday?.[0]?.astro?.sunset}
           </h2>
         </div>
       </div>
