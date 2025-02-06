@@ -126,7 +126,7 @@ const WeatherCard = (props) => {
         </div>
       </div>
 
-      <div className="w-[100%] max-w-[400px] h-[100px] drop-shadow-md flex bg-white mt-5 rounded-[15px]">
+      <div className="w-[100%] max-w-[400px] h-[100px] drop-shadow-md flex bg-white mt-5 mb-5 rounded-[15px]">
         <div className="w-[50%] flex justify-center items-center">
           <GiSunset className="text-[60px] text-[#f2b72c] mt-2 mb-2" />
         </div>
