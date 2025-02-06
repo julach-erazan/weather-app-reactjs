@@ -100,11 +100,11 @@ const ForecastPage = (props) => {
         </div>
       </div>
 
-      <ul className="w-[100%] max-w-[400px]">
+      <ul className="w-[100%] max-w-[400px] transform -translate-y-34">
         {
           forecastWeather.map((data, index) => (
             <li key={index}>
-              <div className="w-[100%] max-w-[400px] transform -translate-y-34 flex flex-row items-center justify-between px-8 py-2 text-gray-400 font-semibold">
+              <div className="w-[100%] max-w-[400px] flex flex-row items-center justify-between px-8 py-2 text-gray-400 font-semibold">
                 <h1>
                   {new Date(data.date).toLocaleDateString("en-US", {
                     month: "short",
