@@ -19,11 +19,9 @@ const GetStart = () => {
         Get accurate weather updates anytime, anywhere with our reliable
         forecast service.
       </p>
-      <button className="w-[70%] max-w-[300px] bg-yellow-400 text-[17px] text-blue-900 mt-8 px-8 py-2 rounded-3xl font-bold hover:bg-yellow-300 transition cursor-pointer">
-      <Link to="/enable-location">
-        Get Start
+      <Link to="/enable-location" className="w-[70%] max-w-[300px] bg-yellow-400 text-[17px] text-blue-900 mt-8 px-8 py-2 rounded-3xl font-bold hover:bg-yellow-300 transition cursor-pointer text-center">  
+          Get Start
       </Link>
-      </button>
     </div>
   );
 };
