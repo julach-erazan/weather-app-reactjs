@@ -15,7 +15,7 @@ const WeatherPage = (props) => {
   })
 
   return (
-    <div className="p-4 flex flex-col items-center">
+    <div className="px-4 flex flex-col items-center">
       {viewForecast ? (
         <>
           <ForecastCard/>
