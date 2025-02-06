@@ -41,7 +41,6 @@ const ForecastPage = (props) => {
     }
   }, [tomorrowWeather]);
 
-
   return (
     <div className="w-full min-w-[400px] flex flex-col items-center">
       <div
@@ -120,7 +119,7 @@ const ForecastPage = (props) => {
                   />
                   <h1 className="w-[100px] text-wrap text-center">{data.day.condition.text}</h1>
                 </div>
-                <h1>22°C</h1>
+                <h1>{Math.round(data.day.maxtemp_c)}°C /{Math.round(data.day.mintemp_c)}°C</h1>
               </div>
             </li>
           ))
