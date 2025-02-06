@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { viewForecast } from "../actions/weatherAction";
+import { MdOutlineArrowForwardIos } from "react-icons/md";
 
 const ViewWeatherForecastButton = (props) => {
     const handleWeatherForcastView = () => {
@@ -8,9 +9,9 @@ const ViewWeatherForecastButton = (props) => {
       }
 
   return (
-    <button className="text-blue-400 cursor-pointer" 
+    <button className="text-blue-400 cursor-pointer flex justify-center items-center" 
     onClick={handleWeatherForcastView}
-    >7-Day Forecasts&gt;</button>
+    >7-Day Forecasts<MdOutlineArrowForwardIos/></button>
   );
 }
 
